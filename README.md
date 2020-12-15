@@ -1,4 +1,4 @@
-# Agilité-  
+# Agilité  Groupe AHDJOUDJ-FIEVEZ
 Projet d'agilité M2 SITN apprentissage  
 
 ## Planification des US  
