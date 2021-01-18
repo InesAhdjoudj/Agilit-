@@ -18,17 +18,16 @@
 #Sample Feature Definition Template
 @tag
 Feature: US_O1 Création animal
-	En tant que membre de l association
-	Je veux créer un animal
-	afin de pouvoir d assurer un suivi de celui-ci dans notre système
+	As a  que membre de l association
+	I want créer un animal
+	So that de pouvoir d assurer un suivi de celui-ci dans notre système
  
-  @tag1
-  Scenario Outline: création d une instance animal
-    Given la création d un nouvel animal
-    When Quand l utilisateur valide la création
-    Then Une instance de la classe animal est créée sans nom et sans pays
+
+  Scenario Outline: creation d une instance animal
+    Given un <nom> et un <pays> 
+    When Quand l utilisateur valide la creation de l animal
+    Then Une instance de la classe animal est creee avec un <nom> et un <pays> .
 
     Examples: 
-      | nom  | pays | status  |
-      | null |    null | Echec |
-      | Bobby |  Français | succès    |
+      | nom    | pays      | status    |
+      | "bobby"| "Francais"| "succes"  |

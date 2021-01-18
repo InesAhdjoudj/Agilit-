@@ -39,9 +39,12 @@ public class Famille {
 		return false;
 	
 	}
-	public void ajouterAnimal(Animal animal) {
-		if (!animalExiste(animal) )
+	public boolean ajouterAnimal(Animal animal) {
+		if (!animalExiste(animal) ) {
 			listeAnimaux.add(animal);
+			return true;
+		}
+		return false;
 	}
 	
 	

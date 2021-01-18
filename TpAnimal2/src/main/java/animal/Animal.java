@@ -41,8 +41,9 @@ public class Animal
      */
     public String voyageVers(String nouveauPays)
     {
-        // Insérez votre code ici
-        this.pays = nouveauPays;
+        if (nouveauPays!= null) 
+        	this.pays = nouveauPays;
         return this.pays;
+        
     }
 }
