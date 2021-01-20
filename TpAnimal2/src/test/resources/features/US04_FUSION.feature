@@ -21,7 +21,7 @@ Feature: US04_FUSION Création d un personnage animal
 
   Scenario Outline: Creation d une instance personnage animal
     Given On donne un <nom> et un <pays>
-    When Quand l utilisateur souhaite créer un personnage animal
+    When Quand l utilisateur souhaite creer un personnage animal
     Then Une instance de la classe personnage animal est creee avec le <nom>
 
     Examples: 

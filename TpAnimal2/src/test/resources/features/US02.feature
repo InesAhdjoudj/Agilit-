@@ -14,13 +14,4 @@ Feature: US_02 Voyage animal
     Examples: 
       | nom   | pays     | status  |
       | "Bobby" |"France"| succès  |
-
- Scenario Outline: refus de pays vide 
-    Given Le <pays> vers lequel voyage l animal 
-    When Quand le voyage vers <pays> vide est valide
-    Then le <pays> est inchange.
-
-    Examples: 
-      | nom   | pays     | status  |
-      | "Bobby" | null   | Fail    |
  

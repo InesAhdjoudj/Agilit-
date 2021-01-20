@@ -27,7 +27,7 @@ public class StepDefFusion {
 		assertTrue((string != ""));
 	}
 
-	@When("^Quand l utilisateur souhaite cr?er un personnage animal$")
+	@When("^Quand l utilisateur souhaite creer un personnage animal$")
 	public void quand_l_utilisateur_souhaite_cr_er_un_personnage_animal() {
 		assertTrue(adapter != null);
 	}
@@ -50,7 +50,7 @@ public class StepDefFusion {
 
 	@Then("^Je diminue ses points de vie en prenant en compte sa resistance et les (\\d+)$")
 	public void je_diminue_ses_points_de_vie_en_prenant_en_compte_sa_resistance(Integer int1) {
-		int vie = (geant.getPointDeVie() - (int)(int1 - (int1*0.5)));
+		int vie = 100 - ((int)(int1*0.5));
 		assertEquals(vie, geant.getPointDeVie());
 	}
 
@@ -65,9 +65,9 @@ public class StepDefFusion {
 		nain.subir(int1);
 	}
 
-	@Then("\"^Je diminue ses points de vie en prenant en compte sa faiblesse et les (\\\\d+)$\"")
+	@Then("^Je diminue ses points de vie en prenant en compte sa faiblesse et les (\\d+)$")
 	public void je_diminue_ses_points_de_vie_en_prenant_en_compte_sa_faiblesse_et_les(Integer int1) {
-		int vie = (nain.getPointDeVie() - (int)(int1 + (int1*0.5)));
+		int vie = (100 - (int)(int1 + (int1*0.5)));
 		assertEquals(vie, nain.getPointDeVie());
 	}
 }

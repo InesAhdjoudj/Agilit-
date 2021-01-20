@@ -12,11 +12,12 @@ import cucumber.api.java.en.When;
 
 public class StepDefAnimal {
 
-private Animal bobby = new Animal("bobby","france");
+private Animal bobby = new Animal("bobby", "France");
 private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 	
 	@Given("^un \"([^\"]*)\" et un \"([^\"]*)\"$")
 	public void creationAnimal(String nom, String pays) {
+		bobby = new Animal(nom, pays);
 	    assertTrue((nom != null) && (pays != null));
 	}
 
@@ -32,6 +33,7 @@ private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 	
 	@Given("^Le \"([^\"]*)\" vers lequel voyage l animal$")
 	public void paysDeAnimal(String pays) {
+		bobby.voyageVers(pays);
 	    assertTrue(pays != null);
 	}
 
@@ -43,14 +45,8 @@ private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 
 	@Then("^le \"([^\"]*)\" de l animal est change$")
 	public void le_de_l_animal_est_change(String pays) {
-		assertTrue(bobby.getPays()!= pays );
+		assertTrue(bobby.getPays()== pays );
 		
-	}
-
-
-	@Given("^Le null vers lequel voyage l animal$")
-	public void le_pays_vers_lequel_voyage_l_animal(String pays) {
-		assertTrue(pays == null);
 	}
 	
 	@When("^Quand le voyage vers null vide est valide$")
@@ -74,7 +70,7 @@ private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 		assertTrue(famille.ajouterAnimal(bobby));
 	}
 
-	@Then("^L animal est ajout? ? la liste d animaux de la famille$")
+	@Then("^L animal est ajoute a la liste d animaux de la famille$")
 	public void l_animal_est_ajout_la_liste_d_animaux_de_la_famille() {
 		assertTrue(famille.animalExiste(bobby));
 	}
