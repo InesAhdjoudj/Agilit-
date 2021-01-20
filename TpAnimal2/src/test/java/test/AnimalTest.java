@@ -86,9 +86,8 @@ public class AnimalTest
     @Test
     public void testVoyageVers()
     {
-        Animal lievre = new Animal("Bobbus", null);
-        lievre.voyageVers("France");
-        assertEquals("France", lievre.getPays());
+        bobby.voyageVers("France");
+        assertEquals("France", bobby.getPays());
     }
 
 
