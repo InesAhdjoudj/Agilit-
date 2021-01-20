@@ -9,8 +9,7 @@ Avant de rédiger les US, nous mettons d'abord en place l'environnement Cucumber
 
 
 
-## Définition des US et critères d'acceptance    
-
+## Définition des US
 
 ### US-01: création d une instance animal  
   As a membre de l association
