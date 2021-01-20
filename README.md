@@ -12,19 +12,19 @@ Avant de rédiger les US, nous mettons d'abord en place l'environnement Cucumber
 ## Définition des US
 
 ### US-01: création d une instance animal  
-  As a membre de l association
-  I want creer un animal
-  So that de pouvoir d assurer un suivi de celui-ci dans notre systeme.
+  As a membre de l association  
+  I want creer un animal  
+  So that de pouvoir d assurer un suivi de celui-ci dans notre systeme.  
   
 ### US_02: Voyage animal
-  As a que membre de l association
-  I want pouvoir modifier le pays de résidence de l animal
-  So that maintenir à jour sa localisation
+  As a que membre de l association  
+  I want pouvoir modifier le pays de résidence de l animal  
+  So that maintenir à jour sa localisation.  
   
 ### US_O3: Lier un animal à une famille  
-  As a que membre de l association
-  I want lier un animal a une famille
-  So that de pouvoir identifier facilement les informations sur sa famille
+  As a que membre de l association  
+  I want lier un animal a une famille  
+  So that de pouvoir identifier facilement les informations sur sa famille.  
 
 
 ## Critères d'acceptance   
