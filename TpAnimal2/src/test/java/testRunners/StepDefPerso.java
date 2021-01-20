@@ -1,4 +1,4 @@
-package stepDefinitions;
+package testRunners;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package stepDefinitions;
+package testRunners;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +15,7 @@ public class StepDefAnimal {
 private Animal bobby = new Animal("bobby","france");
 private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 	
-	@Given("^un (.*) et un (.*) $")
+	@Given("^un \"([^\"]*)\" et un \"([^\"]*)\"$")
 	public void creationAnimal(String nom, String pays) {
 	    assertTrue((nom != null) && (pays != null));
 	}
@@ -25,71 +25,71 @@ private Famille famille = new Famille("AHDJOUDJ", "34 rue truffaut");
 	    assertTrue(bobby != null);
 	}
 
-	@Then("^Une instance de la classe animal est creee avec un (.*) et un (.*) . $")
+	@Then("^Une instance de la classe animal est creee avec un \"([^\"]*)\" et un \"([^\"]*)\" \\.$")
 	public void animalCréé(String nom, String pays) {
 	    assertTrue(bobby.getNom()==nom && bobby.getPays()==pays);
 	}
 	
-	@Given("^Le (.*) vers lequel voyage l animal$")
+	@Given("^Le \"([^\"]*)\" vers lequel voyage l animal$")
 	public void paysDeAnimal(String pays) {
 	    assertTrue(pays != null);
 	}
 
-	@When("^Quand le voyage vers (.*) est valide$")
+	@When("^Quand le voyage vers \"([^\"]*)\" est valide$")
 	public void quand_le_voyage_est_valide(String pays) {
 		bobby.voyageVers(pays);
 		assertTrue(bobby.getPays()!= null );
 	}
 
-	@Then("^le (.*) de l animal est change$")
+	@Then("^le \"([^\"]*)\" de l animal est change$")
 	public void le_de_l_animal_est_change(String pays) {
 		assertTrue(bobby.getPays()!= pays );
 		
 	}
 
 
-	@Given("^Le (.*) vers lequel voyage l animal$")
+	@Given("^Le null vers lequel voyage l animal$")
 	public void le_pays_vers_lequel_voyage_l_animal(String pays) {
 		assertTrue(pays == null);
 	}
 	
-	@When("^Quand le voyage vers (.*) vide est valide$")
+	@When("^Quand le voyage vers null vide est valide$")
 	public void quand_le_voyage_vers_null_vide(String pays) {
 	   bobby.voyageVers(pays);
 	}
 	
-	@Then("^le (.*) est inchange.$")
+	@Then("^le null est inchange\\.$")
 	public void le_null_est_inchange(String pays) {
 	    // Write code here that turns the phrase above into concrete actions
 	    assertTrue(bobby.getPays()!= pays);
 	}
 
-	@Given("Je souhaite lier un animal a une famille")
+	@Given("^Je souhaite lier un animal a une famille$")
 	public void je_souhaite_lier_un_animal_a_une_famille() {
 		assertTrue(famille != null && bobby != null);
 	}
 
-	@When("Quand la famille adopte un {string}")
+	@When("^Quand la famille adopte un \"([^\"]*)\"$")
 	public void quand_la_famille_adopte_un(String string) {
 		assertTrue(famille.ajouterAnimal(bobby));
 	}
 
-	@Then("L animal est ajoute a la liste d animaux de la famille")
+	@Then("^L animal est ajout? ? la liste d animaux de la famille$")
 	public void l_animal_est_ajout_la_liste_d_animaux_de_la_famille() {
 		assertTrue(famille.animalExiste(bobby));
 	}
 
-	@Given("Je souhaite lier un animal existant a une famille")
+	@Given("^Je souhaite lier un animal existant a une famille$")
 	public void je_souhaite_lier_un_animal_existant_a_une_famille() {
 		assertTrue(bobby!= null && famille != null);
 	}
 	
-	@When("Quand la famille adopte un bobby")
+	@When("^Quand la famille adopte un bobby$")
 	public void quand_la_famille_adopte_un_bobby() {
 		assertTrue(!famille.ajouterAnimal(bobby));
 	}
 	
-	@Then("L animal n est pas ajoute car il existe")
+	@Then("^L animal n est pas ajoute$")
 	public void l_animal_n_est_pas_ajoute() {
 		assertTrue(famille.animalExiste(bobby));
 

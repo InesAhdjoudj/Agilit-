@@ -8,8 +8,6 @@ public class CharacterDecorator implements CharacterFictif {
     public CharacterDecorator(CharacterFictif c)
     {
         this.characterFictif = c;
-        
-        
     }
     
 	public String getNom() {
