@@ -3,7 +3,7 @@ Projet d'agilité M2 SITN apprentissage
 
 Dans le tutoriel réalisé, il est question de procéder à une intégration agile du projet dejà en cours (partie Java, BlueJ et Junit réalisée). L'intégration agile consite à définir des User Stories et à les implémenter dans des tests fonctionnels grâce à l'outil Cucumber sur Eclipse.
 
-##Cucumber, Eclipse et tests fonctionnels
+## Cucumber, Eclipse et tests fonctionnels
 
 Avant de rédiger les US, nous mettons d'abord en place l'environnement Cucumber. Pour cela, il suffit de télecharger le plug-in Cucumber-Eclipse en utilisant le menu Help → Install New Software et coller l'adresse suivante : https://cucumber.io/cucumber-eclipse//update-site. Cucumber-Eclipse qui va permettre d'écrire et d'exécuter les scénarios Cucumber directement dans Eclipse facilitant ainsi leur automatisation. Il suffira ensuite d'ajouter les dépendances nécessaires pour finaliser l'installation.
 
