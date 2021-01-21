@@ -15,3 +15,4 @@ Feature: US_O3 Lier un animal à une famille
     Examples: 
       | nomFamille  | adresse         | listeAnimaux   | animal | status  |
       | "AHDJOUDJ"  |"34 rue Truffaut"|                |"bobby" | Succes  |
+      | "AHDJOUDJ"  |"34 rue Truffaut"|                |"bobby" | Succes  |

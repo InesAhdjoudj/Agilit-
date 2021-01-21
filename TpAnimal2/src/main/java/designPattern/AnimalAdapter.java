@@ -1,4 +1,4 @@
-package design_pattern;
+package designPattern;
 
 import animal.Animal;
 import personnage.Personnage;

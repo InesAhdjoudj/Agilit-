@@ -1,4 +1,4 @@
-package design_pattern;
+package designPattern;
 
 public class NainDecorator extends CharacterDecorator {
 

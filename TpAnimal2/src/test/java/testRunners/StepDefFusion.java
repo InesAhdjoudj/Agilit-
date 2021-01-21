@@ -8,9 +8,9 @@ import animal.Animal;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import design_pattern.AnimalAdapter;
-import design_pattern.GeantDecorator;
-import design_pattern.NainDecorator;
+import designPattern.AnimalAdapter;
+import designPattern.GeantDecorator;
+import designPattern.NainDecorator;
 import personnage.Personnage;
 
 public class StepDefFusion {

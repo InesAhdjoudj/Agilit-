@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import design_pattern.NainDecorator;
+import designPattern.NainDecorator;
 import personnage.Personnage;
 
 public class NainDecoratorTest {

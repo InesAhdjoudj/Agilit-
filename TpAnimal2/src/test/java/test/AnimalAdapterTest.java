@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import animal.Animal;
-import design_pattern.AnimalAdapter;
+import designPattern.AnimalAdapter;
 
 public class AnimalAdapterTest {
 	private AnimalAdapter adapter;

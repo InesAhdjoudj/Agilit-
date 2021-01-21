@@ -1,6 +1,6 @@
 package personnage;
 
-import design_pattern.CharacterFictif;
+import designPattern.CharacterFictif;
 
 public class Personnage implements CharacterFictif {
 	  // variables d'instance - remplacez l'exemple qui suit par le vï¿½tre
