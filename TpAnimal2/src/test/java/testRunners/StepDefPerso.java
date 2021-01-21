@@ -13,7 +13,7 @@ import personnage.Personnage;
 public class StepDefPerso {
 
 	private Arme arme;
-	private Personnage link = new Personnage("link", "epee", 10);
+	private Personnage link;
 	
 
 	// Scenario 1 US 1
@@ -39,20 +39,18 @@ public class StepDefPerso {
 	//Scenario 2 US 2
 	@Given("^Le personnage porte une \"([^\"]*)\" a (\\d+) degats$")
 	public void le_personnage_(String arme, int degats) throws Throwable {
-	    arme = "epee";
-	    degats = 10;
-	    assertTrue(link.getArme().getType() == arme && link.getArme().getDegats() == degats);
+	
+		link = new Personnage("link", arme, degats);
+	    assertTrue(link.getArme().getType().equals("epee") && link.getArme().getDegats() == 10);
 	}
 	
-	@When("^Le personnage jette son arme$")
+	@When("^Le personnage ramasse une nouvelle arme$")
 	public void le_personnage_jette_son_arme() throws Throwable {
-	    link.setArme(new Arme("poing", 1));
+		link.changerArme("lance", 15);
 	}
 	
 	@Then("^Le personnage possede maintenant une  \"([^\"]*)\" a (\\d+) degats$")
 	public void le_personnage_possede_maintenant_une_a_degats(String arme, int degats) throws Throwable {
-		arme = "lance";
-	    degats = 15;
 	    link.changerArme(arme, degats);
 	    assertTrue(link.getArme().getType() != "epee" && link.getArme().getDegats() != 10);    
 	}
@@ -60,22 +58,19 @@ public class StepDefPerso {
 	
 	// Scenario 3 US3
 	@Given("^Le personnage veut recuperer des points de vie, ses points de vie sont de (\\d+)$")
-	public void le_personnage_veut_recuperer_des_points_de_vie_ses_points_de_vie_sont_de(int hp) throws Throwable {		hp = 5;
-	    hp = 95;
+	public void le_personnage_veut_recuperer_des_points_de_vie_ses_points_de_vie_sont_de(int hp) throws Throwable {
+		link = new Personnage("link", "epee", 10);
 		link.subir(5);
-	    assertTrue(link.getPointDeVie() == hp);
+	    	assertTrue(link.getPointDeVie() == hp);
 	}
 
 	@When("^Le personnage se soigne  de (\\d+) points de vie$")
 	public void le_personnage_se_soigne_de_points_de_vie(int soin) throws Throwable {
-		soin = 5;
 	    link.soigner(soin);
-	    System.out.println(link.getPointDeVie());
 	}
 
 	@Then("^Les points de vie du personnage remonte a (\\d+)$")
 	public void les_points_de_vie_du_personnage_remonte_a(int hp) throws Throwable {
-		hp = 100;
 		assertTrue(link.getPointDeVie() == hp);
 	}
 
